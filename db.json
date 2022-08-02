@@ -3,13 +3,13 @@
     {
       "id": 1,
       "title": "Coder dog",
-      "likes": 7,
+      "likes": 17,
       "image": "./assets/coder-dog.png"
     },
     {
       "id": 2,
       "title": "Coder cats",
-      "likes": 5,
+      "likes": 43,
       "image": "./assets/coder-cat.jpeg"
     }
   ],
@@ -38,6 +38,41 @@
       "imageId": 1,
       "content": "Hes a good boy!!",
       "id": 5
+    },
+    {
+      "content": "dsfsdfdsf",
+      "imageId": 2,
+      "id": 6
+    },
+    {
+      "content": "dsfsdfdsf",
+      "imageId": 2,
+      "id": 7
+    },
+    {
+      "content": "dsfsdfdsf",
+      "imageId": 2,
+      "id": 8
+    },
+    {
+      "content": "dsfsdfdsf",
+      "imageId": 2,
+      "id": 9
+    },
+    {
+      "content": "dsfsdfdsf",
+      "imageId": 1,
+      "id": 10
+    },
+    {
+      "content": "sadasd",
+      "imageId": 1,
+      "id": 11
+    },
+    {
+      "content": "asdasd",
+      "imageId": 1,
+      "id": 12
     }
   ]
 }

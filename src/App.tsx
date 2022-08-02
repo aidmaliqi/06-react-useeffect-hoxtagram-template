@@ -7,8 +7,8 @@ import { ImageContainer } from "../components/ImageContainer";
 import { Images, imagesData, Comments, commentsData } from "../data/data";
 
 function App() {
-  const [images, setImages] = useState(imagesData);
-  const [comments, setComments] = useState(commentsData);
+  const [images, setImages] = useState<Images[]>([]);
+  const [comments, setComments] = useState<Comments[]>([]);
 
   useEffect(() => {
     fetch(`http://localhost:4000/images`)
@@ -33,7 +33,7 @@ function App() {
     const match = imagesCopy.find((target: Images) => target.id === image.id);
     match.likes++;
     //update the server
-    fetch(`http://localhost:4000/images/${image.likes}`, {
+    fetch(`http://localhost:4000/images/${image.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -44,9 +44,7 @@ function App() {
     setImages(imagesCopy);
   }
 
-  function createComment(text: string, image : Images) {
-    const commentsCopy = structuredClone(comments);
-
+  function createComment(text: string, image: Images) {
     let newComment = {
       content: text,
       imageId: image.id,
@@ -66,7 +64,7 @@ function App() {
   }
 
   return (
-    <body>
+    <>
       <Logo />
       <ImageContainer
         images={images}
@@ -74,7 +72,7 @@ function App() {
         like={like}
         createComment={createComment}
       />
-    </body>
+    </>
   );
 }
 

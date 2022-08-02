@@ -23,7 +23,12 @@ export function ImageContainer({
             <img src={image.image} className="image" />
             <div className="likes-section">
               <span className="likes">{image.likes}</span>
-              <button className="like-button" onClick={like(image)}>
+              <button
+                className="like-button"
+                onClick={() => {
+                  like(image);
+                }}
+              >
                 ♥
               </button>
             </div>
@@ -39,7 +44,6 @@ export function ImageContainer({
               action=""
               className="comment-form"
               onSubmit={(event) => {
-                event.preventDefault();
                 createComment(event.target.input.value, image);
               }}
             >
@@ -49,7 +53,13 @@ export function ImageContainer({
                 className="comment-input"
                 placeholder="Add a comment..."
               />
-              <button className="comment-button" type="submit">
+              <button
+                className="comment-button"
+                type="submit"
+                onSubmit={(event) => {
+                  createComment(event.target.input.value, image);
+                }}
+              >
                 Post
               </button>
             </form>
