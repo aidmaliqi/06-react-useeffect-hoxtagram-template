@@ -11,6 +11,12 @@
       "title": "Coder cats",
       "likes": 43,
       "image": "./assets/coder-cat.jpeg"
+    },
+    {
+      "title": "sadasd",
+      "image": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg",
+      "likes": 0,
+      "id": 3
     }
   ],
   "comments": [
@@ -73,6 +79,11 @@
       "content": "asdasd",
       "imageId": 1,
       "id": 12
+    },
+    {
+      "content": "asdasdsad",
+      "imageId": 3,
+      "id": 13
     }
   ]
 }

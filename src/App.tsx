@@ -63,9 +63,31 @@ function App() {
       });
   }
 
+  function createPost(text : string , link : string){
+    let newPost = {
+      title: text,
+      image: link,
+      likes : 0
+    }
+
+    fetch(`http://localhost:4000/images`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newPost),
+    })
+      .then((resp) => resp.json())
+      .then((postsFromServer) => {
+        setImages([...images, postsFromServer]);
+      });
+
+
+  }
+
   return (
     <>
-      <Logo />
+      <Logo createPost={createPost}/>
       <ImageContainer
         images={images}
         filteredComments={filteredComments}

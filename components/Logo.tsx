@@ -1,7 +1,15 @@
 import React from "react";
+import { Newpost } from "./Newpost";
 
- export function Logo () {
-    return (
-        <img className="logo" src="assets/hoxtagram-logo.png" />
-    )
- }
+type Prop ={
+  createPost : Function
+}
+
+export function Logo({createPost} : Prop) {
+  return (
+    <>
+      <img className="logo" src="assets/hoxtagram-logo.png" />
+      <Newpost createPost={createPost}/>
+    </>
+  );
+}
